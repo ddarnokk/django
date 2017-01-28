@@ -40,10 +40,10 @@ color: #FFF;
                     {% if sells %}
 
 <table class="table">
+                        <tr><td><b> Numer </b><td><b>Nazwa</b></td><td><b>Cena</b></td><td><b>Data Dodania</b></td><td><b>Dostępność</b></td><td><b></b></td></td></tr>
                     {% for instance in sells %}
     </br>
-
-                        <tr><td>{{ forloop.counter }} </td><td> {{ instance.name }} </td><td> {{ instance.price }} </td><td> {{ instance.timestamp|timesince}} </td></tr>
+                        <tr><td>{{ forloop.counter }} </td><td> {{ instance.name }} </td><td> {{ instance.price }} </td><td> {{ instance.timestamp|timesince}} </td><td> {{ instance.available}} </td> <td> <a class="btn btn-sm btn-primary" href="{% url 'contact' %}" role="button">Zamów &raquo;</a> </td> </tr>
 
                     {% endfor %}
 </table>

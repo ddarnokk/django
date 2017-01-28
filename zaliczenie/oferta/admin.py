@@ -7,5 +7,5 @@ from .models import Sell
 
 
 class AdminSell(admin.ModelAdmin):
-    list_display = ('name','price')
+    list_display = ('name', 'price', 'available')
 admin.site.register(Sell, AdminSell)

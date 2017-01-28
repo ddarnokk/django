@@ -46,7 +46,7 @@ def home(request):
     return render(request, "home.html", context)
 
 def contact(request):
-    title = 'Contact me'
+    title = 'Napisz do mnie'
     title_align_center = True
     form = ContactForm(request.POST or None)
     if form .is_valid():

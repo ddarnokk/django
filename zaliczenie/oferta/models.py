@@ -8,4 +8,4 @@ class Sell(models.Model):
     name = models.CharField(max_length=120, blank=False, null=True)
     price = models.CharField(max_length=120, blank=False, null=True)
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
-
+    available = models.BooleanField(default=True)
