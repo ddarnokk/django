@@ -37,11 +37,13 @@ color: #FFF;
 
 <h1>Oferta</h1>
 
-                    {% if queryset %}
-                    <h2>Oferta2.</h2>
+                    {% if sells %}
+
 <table class="table">
-                    {% for instance in queryset %}
-                        <tr><td>{{ forloop.counter }} </td><td>{{ instance }} </td><td> {{ instance.name }} </td><td> {{ instance.price }} </td><td> {{ instance.timestamp|timesince}} </td></tr>
+                    {% for instance in sells %}
+    </br>
+
+                        <tr><td>{{ forloop.counter }} </td><td> {{ instance.name }} </td><td> {{ instance.price }} </td><td> {{ instance.timestamp|timesince}} </td></tr>
 
                     {% endfor %}
 </table>
