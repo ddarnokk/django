@@ -28,7 +28,7 @@ urlpatterns = [
     url(r'^about/$', about, name='about'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/', include('registration.backends.default.urls')),
-    # url(r'^accounts/', include('allauth.urls')),
+    url(r'^login/', include('allauth.urls')),
     url(r'^oferta/$', sell, name='oferta'),
 ]
 
